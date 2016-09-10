@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SpeedupActivity" >
+
+    <!-- 上方动作导航条 -->
+
+    <edu.feicui.app.phone.view.ActionBarView
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0" />
+
+    <!-- 上方手机加速度ＵＩ -->
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        layout="@layout/layout_speedup_show" />
+
+    <!-- 下方运行中程序列表 -->
+    <include layout="@layout/layout_listview" />
+
+    <!-- 下方全选和显示进程切换 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <CheckBox
+            android:id="@+id/cb_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_showapp"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/speedup_showapp_height"
+            android:background="@drawable/btn_float"
+            android:text="@string/speedup_show_sysapp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

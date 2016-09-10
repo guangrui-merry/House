@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhonemgrActivity" >
+
+    <!-- 动作导航条 -->
+
+    <edu.feicui.app.phone.view.ActionBarView
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!-- 电池电量 -->
+
+    <LinearLayout
+        android:id="@+id/ll_layout_battery"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/phonemgr_height"
+        android:background="@drawable/home_entry_item"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp" >
+
+        <ProgressBar
+            android:id="@+id/pb_battery"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/phonemgr_battery_height"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbar_battery" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="60dp"
+            android:layout_weight="0"
+            android:background="@color/battery_progressbar_bg" />
+
+        <TextView
+            android:id="@+id/tv_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0"
+            android:text="80%"
+            android:textColor="@color/battery_speed" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_listview"/>
+
+</LinearLayout>

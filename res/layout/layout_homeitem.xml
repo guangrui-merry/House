@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 第一排 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- style/homeitem内已有onclick属性 hitHomeitem -->
+
+        <TextView
+            android:id="@+id/ll_rocket"
+            style="@style/homeitem"
+            android:drawableTop="@drawable/icon_rocket"
+            android:text="@string/rocket" />
+        <!-- 以下都同上(只有对应图标及文本不同) -->
+
+        <TextView
+            android:id="@+id/ll_softmgr"
+            style="@style/homeitem"
+            android:drawableTop="@drawable/icon_softmgr"
+            android:text="@string/softmgr" />
+
+        <TextView
+            android:id="@+id/ll_phonemgr"
+            style="@style/homeitem"
+            android:drawableTop="@drawable/icon_phonemgr"
+            android:text="@string/phonemgr" />
+    </LinearLayout>
+    <!-- 第二排 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- style/homeitem内已有onclick属性 hitHomeitem -->
+
+        <TextView
+            android:id="@+id/ll_telmgr"
+            style="@style/homeitem"
+            android:drawableTop="@drawable/icon_telmgr"
+            android:text="@string/telmgr" />
+
+        <TextView
+            android:id="@+id/ll_filemgr"
+            style="@style/homeitem"
+            android:drawableTop="@drawable/icon_filemgr"
+            android:text="@string/filemgr" />
+
+        <TextView
+            android:id="@+id/ll_sdclean"
+            style="@style/homeitem"
+            android:drawableTop="@drawable/icon_sdclean"
+            android:text="@string/sdclean" />
+    </LinearLayout>
+
+</LinearLayout>
